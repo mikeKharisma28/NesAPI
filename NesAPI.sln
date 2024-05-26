@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NesAPI", "NesAPI\NesAPI.csproj", "{34C09125-2113-44FD-AFDD-B8E1203675A4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NesAPI", "NesAPI\NesAPI.csproj", "{34C09125-2113-44FD-AFDD-B8E1203675A4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodeID.API.Entities", "CodeID.API.Entities\CodeID.API.Entities.csproj", "{07B3D45C-9B4F-4704-9B0A-DC84271E0962}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{34C09125-2113-44FD-AFDD-B8E1203675A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{34C09125-2113-44FD-AFDD-B8E1203675A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{34C09125-2113-44FD-AFDD-B8E1203675A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07B3D45C-9B4F-4704-9B0A-DC84271E0962}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07B3D45C-9B4F-4704-9B0A-DC84271E0962}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07B3D45C-9B4F-4704-9B0A-DC84271E0962}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07B3D45C-9B4F-4704-9B0A-DC84271E0962}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
