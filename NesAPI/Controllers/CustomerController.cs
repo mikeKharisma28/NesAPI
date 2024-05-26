@@ -9,10 +9,12 @@ namespace NesAPI.Controllers
     public class CustomerController : ControllerBase
     {
         private readonly ILogger _logger;
+        private readonly IConfiguration _config;
 
-        public CustomerController(ILogger<CustomerController> logger)
+        public CustomerController(ILogger<CustomerController> logger, IConfiguration config)
         {
             _logger = logger;
+            _config = config;
         }
 
         [HttpGet]
@@ -25,6 +27,7 @@ namespace NesAPI.Controllers
                 switch(type)
                 {
                     case "entid":
+
                         break;
                     case "cif":
                         break;
