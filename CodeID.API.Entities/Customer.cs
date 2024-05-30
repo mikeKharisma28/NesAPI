@@ -1,6 +1,8 @@
-﻿namespace CodeID.BOP.Entities
+﻿using PB.Common.DataAccess.Model;
+
+namespace CodeID.API.Entities
 {
-    public class Customer
+    public class Customer : DbBaseEntity
     {
         public string PriorityInformation { get; set; }
 

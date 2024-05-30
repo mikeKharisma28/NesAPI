@@ -1,6 +1,8 @@
-﻿using CodeID.BOP.Entities;
+﻿using CodeID.API.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using NesAPI.Interfaces;
+using NesAPI.Services;
 
 namespace NesAPI.Controllers
 {
@@ -27,7 +29,8 @@ namespace NesAPI.Controllers
                 switch(type)
                 {
                     case "entid":
-
+                        ICustomerPreferenceServices customerPreference = new CustomerPreferenceServices(_logger, _config);
+                        customers = await customerPreference.GetCustomerDetailsByEID(value);
                         break;
                     case "cif":
                         break;
