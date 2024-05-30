@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -14,8 +14,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CodeID.API.Entities\CodeID.API.Entities.csproj" />
-    <ProjectReference Include="..\CodeID.API.Repository\CodeID.API.Repository.csproj" />
+    <ProjectReference Include="..\Mike.API.Entities\Mike.API.Entities.csproj" />
+    <ProjectReference Include="..\Mike.API.Repositories\Mike.API.Repositories.csproj" />
   </ItemGroup>
 
   <ItemGroup>

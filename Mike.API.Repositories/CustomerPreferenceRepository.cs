@@ -1,10 +1,10 @@
-﻿using CodeID.API.Entities;
+﻿using Mike.API.Entities;
 using Newtonsoft.Json;
 using PB.Common.DataAccess;
 using PB.Common.DataAccess.MsSql;
 using System.Data;
 
-namespace CodeID.API.Repository
+namespace Mike.API.Repositories
 {
     public class CustomerPreferenceRepository
     {

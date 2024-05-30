@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -7,17 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <ProjectReference Include="..\Mike.Common.DataAccess\Mike.Common.DataAccess.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CodeID.API.Entities\CodeID.API.Entities.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Reference Include="PB.Common.DataAccess">
-      <HintPath>..\Assemblies\PB.Common.DataAccess.dll</HintPath>
-    </Reference>
     <Reference Include="PB.Common.DataAccess.MsSql">
       <HintPath>..\Assemblies\PB.Common.DataAccess.MsSql.dll</HintPath>
     </Reference>

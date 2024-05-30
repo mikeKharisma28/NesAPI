@@ -1,6 +1,6 @@
-﻿using PB.Common.DataAccess.Model;
+﻿using Mike.Common.DataAccess.Models;
 
-namespace CodeID.API.Entities
+namespace Mike.API.Entities
 {
     public class Customer : DbBaseEntity
     {

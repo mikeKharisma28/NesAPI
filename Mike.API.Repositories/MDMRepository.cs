@@ -1,8 +1,8 @@
-﻿using CodeID.API.Entities;
+﻿using Mike.API.Entities;
 using PB.Common.DataAccess.Teradata;
 using System.Data;
 
-namespace CodeID.API.Repository
+namespace Mike.API.Repositories
 {
     public class MDMRepository
     {

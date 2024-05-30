@@ -1,11 +1,6 @@
-﻿using PB.Common.DataAccess.Model;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Mike.Common.DataAccess.Models;
 
-namespace CodeID.API.Entities
+namespace Mike.API.Entities
 {
     public class Product : DbBaseEntity
     {

@@ -1,5 +1,5 @@
-﻿using CodeID.API.Entities;
-using CodeID.API.Repository;
+﻿using Mike.API.Entities;
+using Mike.API.Repositories;
 using NesAPI.Interfaces;
 
 namespace NesAPI.Services
@@ -26,7 +26,7 @@ namespace NesAPI.Services
                 return new List<Customer>();
 
             List<CustomerMDM> customerDetails = new MDMRepository("", "").GetCustomerByEID(eid);
-            List<string> custCifs = customerDetails.Select<CustomerMDM, string>((Func<CustomerMDM, string>)(x => x.CIF)).Distinct<string>().ToList();
+            List<string> custCifs = customerDetails.Select(x => x.CIF).Distinct().ToList();
 
             _logger.LogInformation("CIF Number for MF check:" + string.Join(",", custCifs));
 
@@ -59,9 +59,9 @@ namespace NesAPI.Services
                     AccountNumber = customer.Products[0].AccountNumber,
                     IsExcluded = customer.Products[0].IsExcluded,
                     IsRegistered = customer.Products[0].IsRegistered,
-                    EmailId = customer.Products[0]?.EmailId == null ? "" : customer.Products[0]?.EmailId,
+                    EmailId = (customer.Products[0]?.EmailId) ?? "",
                     ProductName = !(customer.Products[0].ProductType == "RD") || customer.Products[0].ProductName != null ? customer.Products[0].ProductName : "",
-                    SourceSystem = customerDetails.Where<CustomerMDM>(x => x.AccountNumber.TrimStart('0') == customer.Products[0].AccountNumber.TrimStart('0')).FirstOrDefault<CustomerMDM>()?.SourceSystem,
+                    SourceSystem = customerDetails.FirstOrDefault(x => x.AccountNumber.TrimStart('0') == customer.Products[0].AccountNumber.TrimStart('0'))?.SourceSystem,
                     ExcludedToDate = customer.Products[0].ExcludedToDate.ToString().Contains("0001") ? new DateTime?() : customer.Products[0].ExcludedToDate,
                     ExcludedFromDate = customer.Products[0].ExcludedFromDate.ToString().Contains("0001") ? new DateTime?() : customer.Products[0].ExcludedFromDate
                 });
@@ -69,7 +69,7 @@ namespace NesAPI.Services
 
             foreach (CustomerMDM customerMDM in customerDetails)
             {
-                if (customerList[0].Products.Find((Predicate<Product>)(x => x.AccountNumber.TrimStart('0') == customerMDM.AccountNumber.TrimStart('0'))) == null)
+                if (customerList[0].Products.Find(x => x.AccountNumber.TrimStart('0') == customerMDM.AccountNumber.TrimStart('0')) == null)
                     customerList[0].Products.Add(new Product()
                     {
                         EnterpriseId = customerMDM.EnterpriseId,

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CodeID.API.Entities
+namespace Mike.API.Entities
 {
     public class CustomerHistory
     {

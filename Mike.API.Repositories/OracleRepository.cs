@@ -1,4 +1,4 @@
-﻿using CodeID.API.Entities;
+﻿using Mike.API.Entities;
 using PB.Common.DataAccess.Oracle;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CodeID.API.Repository
+namespace Mike.API.Repositories
 {
     public class OracleRepository
     {
