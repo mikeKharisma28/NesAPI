@@ -6,4 +6,25 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Reference Include="PB.Common.DataAccess">
+      <HintPath>..\..\..\..\Objects for Study\BackOfficeAPI\PB.Common.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="PB.Common.DataAccess.MsSql">
+      <HintPath>..\..\..\..\Objects for Study\BackOfficeAPI\PB.Common.DataAccess.MsSql.dll</HintPath>
+    </Reference>
+    <Reference Include="PB.Common.DataAccess.Oracle">
+      <HintPath>..\..\..\..\Objects for Study\BackOfficeAPI\PB.Common.DataAccess.Oracle.dll</HintPath>
+    </Reference>
+    <Reference Include="PB.Common.DataAccess.Teradata">
+      <HintPath>..\..\..\..\Objects for Study\BackOfficeAPI\PB.Common.DataAccess.Teradata.dll</HintPath>
+    </Reference>
+    <Reference Include="PB.Common.Services">
+      <HintPath>..\..\..\..\Objects for Study\BackOfficeAPI\PB.Common.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="PB.Common.Web">
+      <HintPath>..\..\..\..\Objects for Study\BackOfficeAPI\PB.Common.Web.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>
